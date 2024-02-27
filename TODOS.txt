@@ -1,0 +1,2 @@
+- SEO - DONE
+the password of the sendMail function is: FBE8592066E1E072B8AB4148A25541DF9A03

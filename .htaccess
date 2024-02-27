@@ -1,0 +1,32 @@
+# Habilitar la reescritura de URL
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Redirigir a archivos .webp si están disponibles
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+    RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1]
+
+    # Configuración del header Vary
+    Header append Vary Accept env=REDIRECT_accept
+</IfModule>
+
+# Configuración de MIME para imágenes .webp
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+</IfModule>
+
+# Configuración de cache para imágenes .webp
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 30 days"
+</IfModule>
+
+# Configuración de cache para video .webm
+<Files "vecteezy_binary-code-matrix-background.webm">
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType video/webm "access plus 30 days"
+    </IfModule>
+</Files>

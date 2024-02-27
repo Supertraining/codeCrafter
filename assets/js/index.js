@@ -1,0 +1,53 @@
+
+const burguerBtn = document.getElementById('burgerBtn')
+const menu = document.getElementById('menu')
+burguerBtn.addEventListener('click', () => {
+
+  menu.classList.contains('show')
+    ? menu.classList.remove('show')
+    : menu.classList.add('show')
+})
+
+const cards = document.querySelectorAll('.card-wrapper')
+cards.forEach((card) => {
+  card.addEventListener('mouseover', () => {
+    card.style.cssText = 'transform: scale(1.01) translateY(-10px); transition: 1s; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); z-index: 1';
+  })
+  card.addEventListener('mouseout', () => {
+    card.style.cssText = 'transform: scale(1); transition: 1s'
+  })
+})
+const cardsBtn = document.querySelectorAll('.card-link')
+cardsBtn.forEach((btn) => {
+  btn.addEventListener('mouseover', () => {
+    btn.style.cssText = 'transform: translateY(-3px) scale(1.02); transition: 1s;  box-shadow: 3px 3px 2px silver;';
+  })
+  btn.addEventListener('mouseout', () => {
+    btn.style.cssText = 'transform: scale(1); transition: 1s'
+  })
+})
+
+
+const formBtn = document.getElementById('form-btn').addEventListener('click', () => {
+
+  Swal.fire({
+    customClass: {
+      confirmButton: "btn-success",
+    },
+    title: "¡Gracias!",
+    text: "Nos pondremos en contacto a la brevedad.",
+    width: 600,
+    confirmButtonColor:"#8bd3fe",
+    padding: "3em",
+    color: "#e5e5e5",
+    background: "#8bd3fe url(./assets/img/codeBackg.webp)",
+  });
+  setTimeout(() => {
+    document.getElementById('form').reset();
+  }, 2000)
+})
+
+
+
+
+
