@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Plan Presencia Web",
+    "price": "Diseño ¡Gratis!",
+    "description": "Solo pagás el mantenimiento mensual.",
+    "features": [
+      { "text": "Diseño web profesional y moderno", "included": true },
+      { "text": "Optimización SEO básica", "included": true },
+      { "text": "Buen rendimiento y velocidad", "included": true },
+      { "text": "Diseño adaptable (responsive)", "included": true },
+      { "text": "Accesibilidad web", "included": true },
+      { "text": "Mantenimiento y soporte", "included": true },
+      { "text": "No incluye desarrollo de apps", "included": false }
+    ],
+    "buttonText": "Consultar Mantenimiento",
+    "buttonLink": "https://wa.me/+541150111375?text=Hola!%20Me%20interesa%20el%20Plan%20Presencia%20Web."
+  },
+  {
+    "title": "Plan Web Completo",
+    "price": "$ ARS",
+    "description": "Ideal para negocios que buscan más funcionalidades.",
+    "features": [
+      { "text": "Todo lo del Plan Presencia Web", "included": true },
+      { "text": "Funcionalidades avanzadas (ej. reservas, tienda online básica)", "included": true },
+      { "text": "SEO avanzado", "included": true },
+      { "text": "Integraciones (ej. redes sociales, pagos)", "included": true },
+      { "text": "No incluye desarrollo de apps complejas", "included": false }
+    ],
+    "buttonText": "Contratar",
+    "buttonLink": "https://wa.me/+541150111375?text=Hola!%20Me%20interesa%20el%20Plan%20Web%20Completo."
+  },
+  {
+    "title": "Plan Integral Web + App",
+    "price": "$ ARS",
+    "description": "La solución definitiva para tu presencia digital completa.",
+    "features": [
+      { "text": "Todo lo del Plan Web Completo", "included": true },
+      { "text": "Desarrollo de Aplicación Web a medida", "included": true },
+      { "text": "Funcionalidades personalizadas", "included": true },
+      { "text": "Soporte prioritario", "included": true },
+      { "text": "Escalabilidad garantizada", "included": true }
+    ],
+    "buttonText": "Contratar",
+    "buttonLink": "https://wa.me/+541150111375?text=Hola!%20Me%20interesa%20el%20Plan%20Integral%20Web%20+%20App."
+  }
+]
