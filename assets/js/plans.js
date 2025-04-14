@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (theme === "light") {
       themeToggleLight.style.display = "none";
-      themeToggleDark.style.display = "inline-block";
+      themeToggleDark.style.display = "flex";
       lightIcon.classList.remove("bi-sun");
       lightIcon.classList.add("bi-sun-fill");
       darkIcon.classList.remove("bi-moon-stars-fill");
       darkIcon.classList.add("bi-moon-stars");
     } else {
-      themeToggleLight.style.display = "inline-block";
+      themeToggleLight.style.display = "flex";
       themeToggleDark.style.display = "none";
       lightIcon.classList.remove("bi-sun-fill");
       lightIcon.classList.add("bi-sun");
