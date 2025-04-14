@@ -277,6 +277,7 @@ footer .footer-brand img {
   box-shadow: 0 0 10px #8bd3fe;
   object-fit: cover;
   object-position: center;
+  height: auto;
 }
 footer .footer-brand .brand-text-code {
   color: var(--secondary-color);
@@ -584,7 +585,7 @@ html.dark {
     align-items: center; /* Centra las cards */
   }
   .card {
-    max-width: 90%; /* Permite que las cards ocupen más ancho */
+    width: 90%; /* Permite que las cards ocupen más ancho */
   }
 }
 
