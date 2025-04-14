@@ -22,7 +22,7 @@
     --background-color: #212529;
     --text-color: #e5e5e5;
     --secondary-color: #6bc2f7;
-    --tertiary-color: #8bd3fe;
+    --tertiary-color: #e5e5e5;
     --card-background-color: #343a40;
     --card-border-color: #495057;
     --card-shadow-color: rgba(255, 255, 255, 0.1);
@@ -74,10 +74,11 @@ header {
   box-shadow: 0 0 10px #8bd3fe;
   object-fit: cover;
   object-position: center;
+  height: auto;
 }
 .brand-text-code {
   color: var(--secondary-color);
-  font-size: clamp(3rem, 6vw, 10rem);
+  font-size: clamp(3rem, 5vw, 10rem);
 }
 .brand-text-crafter {
   color: var(--tertiary-color);
@@ -376,6 +377,7 @@ body {
   }
   .header-brand img {
     width: 30%;
+    height: auto;
   }
   .theme-toggle button {
     width: 30% !important;
@@ -556,7 +558,7 @@ html.dark {
   --background-color: #212529;
   --text-color: #e5e5e5;
   --secondary-color: #6bc2f7;
-  --tertiary-color: #8bd3fe;
+  --tertiary-color: #e5e5e5;
   --card-background-color: #343a40;
   --card-border-color: #495057;
   --card-shadow-color: rgba(255, 255, 255, 0.1);
