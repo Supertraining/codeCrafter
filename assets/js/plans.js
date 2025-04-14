@@ -23,16 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.classList.add('card');
 
-        const featuresHtml = plan.features.map(feature => `
-          <li>
-            <i class="bi ${feature.included ? 'bi-check-circle-fill' : 'bi-x-circle-fill'}"></i> ${feature.text}
-          </li>
-        `).join('');
+        const featuresHtml = plan.features.map(feature => {
+          const liClass = feature.included ? 'feature-included' : 'feature-excluded';
+          const iconClass = (feature.included ? feature.icon : "bi-x-circle-fill"); // Fallback if icon is missing
+          return `
+            <li class="${liClass}">
+              <i class="bi ${iconClass}"></i> ${feature.text}
+            </li>
+          `;
+        }).join('');
+
+        const priceNoteHtml = plan.priceNote ? `<p class="price-note">${plan.priceNote}</p>` : '';
 
         card.innerHTML = `
           <h3>${plan.title}</h3>
           <p class="precio">${plan.price}</p>
-          <p>${plan.description}</p>
+          ${priceNoteHtml}
+          <p class="description">${plan.description}</p>
           <ul>
             ${featuresHtml}
           </ul>

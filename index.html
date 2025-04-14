@@ -4,44 +4,97 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Desarrollo Web y Aplicaciones - CodeCrafter</title>
     <meta
       name="description"
-      content="Transformamos ideas en experiencias digitales. Especializados en diseño web personalizado y desarrollo de aplicaciones a medida, creamos soluciones únicas para cada cliente. Descubre cómo podemos potenciar tu presencia en línea y mejorar la eficiencia de tu negocio. ¡Innovación, calidad y profesionalismo en cada proyecto!" />
+      content="Transformamos ideas en experiencias digitales. Especializados en diseño web personalizado y desarrollo de aplicaciones a medida, creamos soluciones únicas para cada cliente. Descubre cómo podemos potenciar tu presencia en línea y mejorar la eficiencia de tu negocio. ¡Innovación, calidad y profesionalismo en cada proyecto!"
+    />
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       type="text/css"
       href="./assets/css/styles.css"
-      loading="lazy" />
+      loading="lazy"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/apple-touch-icon.webp" />
+      href="/apple-touch-icon.webp"
+    />
     <link
       rel="icon"
       type="image/webp"
       sizes="32x32"
-      href="/favicon-32x32.webp" />
+      href="/favicon-32x32.webp"
+    />
     <link
       rel="icon"
       type="image/webp"
       sizes="16x16"
-      href="/favicon-16x16.webp" />
+      href="/favicon-16x16.webp"
+    />
     <link
       rel="manifest"
-      href="/site.webmanifest" />
+      href="/site.webmanifest"
+    />
     <link
       rel="robots"
-      href="robots.txt" />
+      href="robots.txt"
+    />
   </head>
+  <script>
+    // Function to apply the theme and update icons
+    function applyTheme(theme) {
+      document.documentElement.className = theme;
+      const lightIcon = document.querySelector('#theme-toggle-light i');
+      const darkIcon = document.querySelector('#theme-toggle-dark i');
+
+      if (theme === 'light') {
+        lightIcon.classList.remove('bi-sun');
+        lightIcon.classList.add('bi-sun-fill');
+        darkIcon.classList.remove('bi-moon-stars-fill');
+        darkIcon.classList.add('bi-moon-stars');
+      } else {
+        lightIcon.classList.remove('bi-sun-fill');
+        lightIcon.classList.add('bi-sun');
+        darkIcon.classList.remove('bi-moon-stars');
+        darkIcon.classList.add('bi-moon-stars-fill');
+      }
+    }
+
+    // Get the theme from localStorage
+    const storedTheme = localStorage.getItem("theme");
+
+    // If there is a theme stored, apply it
+    if (storedTheme) {
+      applyTheme(storedTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      // If no theme is stored, but the user prefers dark mode, apply dark
+      applyTheme("dark");
+    } else {
+      // Otherwise, apply light
+      applyTheme("light");
+    }
+  </script>
 
   <body>
     <header>
@@ -50,26 +103,29 @@
         loop
         muted
         playsinline
-        id="header-background-video">
+        id="header-background-video"
+      >
         <source
           src="./assets/videos/vecteezy_binary-code-matrix-background.webm"
-          type="video/webm" />
+          type="video/webm"
+        />
       </video>
-      
-      <div
-      class="header-brand">
-        <img
-          src="./assets/img/Code.webp"
-          alt="Logo de CodeCrafter" />
+        <div class="header-brand">
+          <img
+            src="https://res.cloudinary.com/marangadev/image/upload/v1744570742/codeCrafter/Codex150_rsbio9.jpg"
+            alt="Logo de CodeCrafter"
+          />
 
-        <p class="brand-text-code">Code</p>
-        <p class="brand-text-crafter">Crafter</p>
+          <p class="brand-text-code">Code</p>
+          <p class="brand-text-crafter">Crafter</p>
+        </div>
+      <div class="theme-toggle">
+        <button id="theme-toggle-light"><i class="bi bi-sun"></i> Light</button>
+        <button id="theme-toggle-dark"><i class="bi bi-moon-stars"></i> Dark</button>
       </div>
-
-      </header>
+    </header>
 
     <main>
-
       <section class="main-title">
         <h1>Diseño de sitios y aplicaciones web</h1>
 
@@ -79,17 +135,20 @@
               aria-label="Chatea en WhatsApp"
               target="_blank"
               href="https://wa.me/+541150111375"
-              class="d-flex flex-column align-items-center text-decoration-none text-success">
+              class="d-flex flex-column align-items-center text-decoration-none text-success"
+            >
               <i
                 class="bi bi-whatsapp"
-                aria-hidden="true"></i>
+                aria-hidden="true"
+              ></i>
               <span class="sr-only">WhatsApp</span>
               <i class="whapp-mssg">¡Escribinos!</i>
-  
+
               <div class="whapp-click">
                 <i
                   class="bi bi-hand-index-thumb"
-                  aria-hidden="true"></i>
+                  aria-hidden="true"
+                ></i>
                 <span class="sr-only">Click para chatear en WhatsApp</span>
               </div>
             </a>
@@ -99,22 +158,24 @@
               aria-label="visita nuestro instagram"
               target="_blank"
               href="https://www.instagram.com/codecrafter____/"
-              class="d-flex flex-column align-items-center text-decoration-none text-success">
+              class="d-flex flex-column align-items-center text-decoration-none text-success"
+            >
               <i
                 class="bi bi-instagram"
-                aria-hidden="true"></i>
+                aria-hidden="true"
+              ></i>
               <span class="sr-only">Instagram</span>
               <i class="whapp-mssg">¡Visitanos!</i>
-  
+
               <div class="whapp-click">
                 <i
                   class="bi bi-hand-index-thumb"
-                  aria-hidden="true"></i>
+                  aria-hidden="true"
+                ></i>
                 <span class="sr-only">Click para chatear en WhatsApp</span>
               </div>
             </a>
           </div>
-          
         </div>
         <div class="subtitle">
           <div><i class="bi bi-shop"></i>Comercios</div>
@@ -140,8 +201,6 @@
       </section>
 
       <hr />
-    
-   
     </main>
 
     <footer>
@@ -150,22 +209,43 @@
         loop
         muted
         playsinline
-        id="footer-background-video">
+        id="footer-background-video"
+      >
         <source
           src="./assets/videos/vecteezy_binary-code-matrix-background.webm"
-          type="video/webm" />
+          type="video/webm"
+        />
       </video>
-
-      <div
-        class="footer-brand">
+      <div class="footer-brand">
         <p class="brand-text-code">Code</p>
         <p class="brand-text-crafter">Crafter</p>
 
         <img
-          src="./assets/img/Code.webp"
-          alt="Logo de CodeCrafter" />
+          src="https://res.cloudinary.com/marangadev/image/upload/v1744570742/codeCrafter/Codex150_rsbio9.jpg"
+          alt="Logo de CodeCrafter"
+        />
+      </div>
+      <div>
+        <p class="copyright">&copy; 2025 CodeCrafter. Todos los derechos reservados.</p>
       </div>
     </footer>
     <script src="./assets/js/plans.js"></script>
+    <script>
+      // Function to switch the theme and store it in localStorage
+      function switchTheme(theme) {
+        applyTheme(theme);
+        localStorage.setItem("theme", theme);
+      }
+
+      // Apply initial theme and set icons
+      applyTheme(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+
+      // Add event listeners to the theme toggle buttons
+      const themeToggleLight = document.getElementById('theme-toggle-light');
+      const themeToggleDark = document.getElementById('theme-toggle-dark');
+
+      themeToggleLight.addEventListener('click', () => switchTheme('light'));
+      themeToggleDark.addEventListener('click', () => switchTheme('dark'));
+    </script>
   </body>
 </html>
