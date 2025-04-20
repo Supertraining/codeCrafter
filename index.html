@@ -189,7 +189,7 @@
 
       <section class="modal-container">
         <div class="wapp-container">
-          <p>¡¡🎉Diseñamos tu página web sin cargo🎉!!</p>
+          <p>¡¡ <small>🎉</small> Diseñamos tu página web sin cargo <small>🎉</small>!!</p>
         </div>
       </section>
 
@@ -233,54 +233,5 @@
       </div>
     </footer>
     <script src="./assets/js/plans.js"></script>
-    <script>
-      const themeToggleLight = document.getElementById("theme-toggle-light");
-      const themeToggleDark = document.getElementById("theme-toggle-dark");
-
-      function applyTheme(theme) {
-        document.documentElement.className = theme;
-
-        const lightIcon = document.querySelector("#theme-toggle-light i");
-        const darkIcon = document.querySelector("#theme-toggle-dark i");
-
-        if (theme === "light") {
-          themeToggleLight.style.display = "none";
-          themeToggleDark.style.display = "inline-block";
-          lightIcon.classList.remove("bi-sun");
-          lightIcon.classList.add("bi-sun-fill");
-          darkIcon.classList.remove("bi-moon-stars-fill");
-          darkIcon.classList.add("bi-moon-stars");
-        } else {
-          themeToggleLight.style.display = "inline-block";
-          themeToggleDark.style.display = "none";
-          lightIcon.classList.remove("bi-sun-fill");
-          lightIcon.classList.add("bi-sun");
-          darkIcon.classList.remove("bi-moon-stars");
-          darkIcon.classList.add("bi-moon-stars-fill");
-        }
-      }
-
-      // Get the theme from localStorage
-      const storedTheme = localStorage.getItem("theme");
-
-      // If there is a theme stored, apply it
-      if (storedTheme) {
-        applyTheme(storedTheme);
-      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        applyTheme("dark");
-      } else {
-        applyTheme("light");
-      }
-
-      // Function to switch the theme and store it in localStorage
-      function switchTheme(theme) {
-        applyTheme(theme);
-        localStorage.setItem("theme", theme);
-      }
-
-      // Add event listeners to the theme toggle buttons
-      themeToggleLight.addEventListener("click", () => switchTheme("light"));
-      themeToggleDark.addEventListener("click", () => switchTheme("dark"));
-    </script>
   </body>
 </html>
