@@ -1,5 +1,5 @@
 :root {
-  --background-color: #fff;
+  --background-color: #fefefe;
   --text-color: #212529;
   --secondary-color: #8bd3fe;
   --tertiary-color: #e5e5e5;
@@ -37,7 +37,6 @@
     --footer-border-color: #495057;
   }
 }
-
 header {
   display: flex;
   flex-direction: column;
@@ -45,7 +44,7 @@ header {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background-image: url();
+  /* background-image: url(); */
 }
 
 #header-background-video {
@@ -317,8 +316,27 @@ body {
   gap: 1rem;
   padding: 10px;
   height: 100svh;
-  background-color: var(--background-color);
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(0, 173, 255, 0.06) 0px,
+      rgba(0, 173, 255, 0.06) 2px,
+      transparent 2px,
+      transparent 20px
+    ),
+    linear-gradient(to right, rgb(0, 26, 56) 0%, rgba(0, 54, 100, 1) 50%, rgba(0, 79, 144, 1) 100%);
   color: var(--text-color);
+}
+::selection {
+  background: #00aaff44;
+}
+
+section {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  margin: 4rem auto;
 }
 
 @media (max-width: 1480px) {
@@ -541,26 +559,12 @@ body {
 }
 
 html.light {
-  --background-color: #fff;
-  --text-color: #212529;
-  --secondary-color: #8bd3fe;
-  --tertiary-color: #e5e5e5;
-  --card-background-color: #fff;
-  --card-border-color: #ddd;
-  --card-shadow-color: rgba(0, 0, 0, 0.1);
-  --card-hover-shadow-color: rgba(0, 0, 0, 0.15);
-  --card-title-color: #0056b3;
-  --price-color: #1f7d44;
-  --description-color: #555;
-  --btn-background-color: #8bd3fe;
-  --btn-text-color: #212529;
-  --btn-hover-background-color: #6bc2f7;
-  --footer-copyright-color: #ccc;
-  --footer-border-color: #555;
-}
-
-html.dark {
-  --background-color: #212529;
+  --background-color: linear-gradient(
+    to right,
+    rgb(0, 26, 56) 0%,
+    rgba(0, 54, 100, 1) 50%,
+    rgba(0, 79, 144, 1) 100%
+  );
   --text-color: #e5e5e5;
   --secondary-color: #6bc2f7;
   --tertiary-color: #e5e5e5;
