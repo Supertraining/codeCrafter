@@ -194,29 +194,30 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  animation: enterFromLeft 5s ease-in 3s infinite forwards;
-  transform: translateX(-1500px);
+  animation: enterFromBelow 500ms ease-in forwards;
+  transform: translateY(-100px);
 }
-@keyframes enterFromLeft {
+@keyframes enterFromBelow {
   0% {
-    transform: translateX(-1500px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   30% {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateY(50px);
+    opacity: 0.5;
   }
   100% {
-    opacity: 0;
-    transform: translateX(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .modal-container .wapp-container p {
   font-size: clamp(2.5rem, 2vw, 2rem);
+  text-align: center;
 }
-.modal-container .wapp-container img {
-  width: 160px;
+.modal-container .wapp-container small {
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 h2 {
@@ -332,7 +333,7 @@ body {
 section {
   backdrop-filter: blur(8px);
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 3rem;
+  padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
   margin: 4rem auto;
@@ -383,10 +384,6 @@ section {
 }
 
 @media (max-width: 560px) {
-  .modal-container .wapp-container {
-    flex-direction: column;
-    text-align: center;
-  }
   #footer-background-video {
     height: 100px !important;
   }
